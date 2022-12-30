@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>glasse price predict</title>
+    </head>
+
+    <body style="padding: 20px; text-align: center; margin: 20px;">
+        <header>
+            <h1 style="color: aquamarine; font-family: 'Courier New', Courier, monospace;">Glasse price predict</h1>
+        </header>
+        <section style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            <p>
+                veillez completer les cases suivantes si vous voulais predire le prix de montire 
+            </p>
+            <form action="/predict_price/result/" method="POST" style="font-size: 20px;">
+                {% csrf_token %}
+                <div style=padding:25px;>
+                    <label>Numero de la marque</label>
+                    <input type='number' name='marque' />
+                </div>
+    
+                <div style=padding:25px;>
+                    <label>Numero du modele</label>
+                    <input type='number' name='modele' />
+                </div>
+    
+                <div style=padding:25px;>
+                    <label>Taille</label>
+                    <input type='number' name='taille' />
+                </div>
+    
+                <div style=padding:25px;>
+                    <label>Couleur en Numero </label>
+                    <input type='number' name='couleur' />
+                </div>
+
+                <div style=padding:25px;>
+                <input type='submit' value="result" style= background:blue; padding:10px; font-size: 20px;/>
+                </div>
+            </form>
+        </section>
+        <footer>
+             
+        </footer>
+    </body>
+</html>
